@@ -9,8 +9,10 @@ public class Player : MonoBehaviour
     public float speed;
 
     int count = 0;
+    public int remain;
 
     public Text countText;
+    public Text remainText;
 
     public AudioClip item;
     AudioSource audioSource; 
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         countText.text = count.ToString();
+        remainText.text = remain.ToString();
     }
 
     void FixedUpdate()
